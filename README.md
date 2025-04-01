@@ -6,6 +6,15 @@ Using Phylactery, you can store highly sensitive data in semi-untrusted and untr
 
 The keys for this data are split into **shards** that must be re-assembled within a set quorum to unlock the file's contents. 
 
+## Cryptography
+
+Phylactery uses a two-key system for secure file encryption:
+
+- **Data Encryption Key (DEK)**: A 256-bit key used with [AES-256-GCM](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) to encrypt and decrypt the actual file contents. The DEK is randomly generated for each encryption operation and is never stored in its complete form.
+
+- **Key Encryption Key (KEK)**: A 256-bit key used to protect the DEK. The KEK is split into multiple shards using [Shamir's Secret Sharing](https://en.wikipedia.org/wiki/Shamir%27s_Secret_Sharing), which allows the key to be reconstructed only when a sufficient number of shards (the quorum) are combined. This provides distributed security, as no single party needs to possess the complete key.
+
+
 ## Installation
 
 ```bash
