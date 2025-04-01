@@ -4,6 +4,8 @@ Phylactery is asecure file encryption system using Shamir's Secret Sharing and A
 
 Using Phylactery, you can store highly sensitive data in semi-untrusted and untrusted locations such as cloud storage protected by the same cryptography used to protect US/NATO TOP SECRET military information. 
 
+The keys for this data are split into **shards** that must be re-assembled within a set quorum to unlock the file's contents. 
+
 ## Installation
 
 ```bash
