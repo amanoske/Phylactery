@@ -1,6 +1,6 @@
 # Phylactery
 
-Phylactery is asecure file encryption system using Shamir's Secret Sharing and AES-256-GCM.
+Phylactery is a secure file encryption system using Shamir's Secret Sharing and AES-256-GCM.
 
 Using Phylactery, you can store highly sensitive data in semi-untrusted and untrusted locations such as cloud storage protected by the same cryptography used to protect US/NATO TOP SECRET military information. 
 
