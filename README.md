@@ -1,10 +1,13 @@
 # Phylactery
+### "An integral part of becoming a lich is creating a magic phylactery in which the character stores its life force. As a rule, the only way to get rid of a lich for sure is to destroy its phylactery. Unless its phylactery is located and destroyed, a lich reappears 1d10 days after its apparent death."
+**-Dungeons and Dragons - 5th Edition SRD**
 
-Phylactery is a secure file encryption system using Shamir's Secret Sharing and AES-256-GCM.
+Phylactery is a secure file encryption system using strong, distributed cryptography. It is designed to protect sensitive personal information that are stored in files on untrusted/semi-trusted environments (e.g.: cloud storage platforms). 
 
-Using Phylactery, you can store highly sensitive data in semi-untrusted and untrusted locations such as cloud storage protected by the same cryptography used to protect US/NATO TOP SECRET military information. 
+While Phylactery is meant for personal secrets management, it is designed to align to the same encryption and key management methods standards regulating the storage of TOP SECRET classified information within US and most NATO militaries. 
 
-The keys for this data are split into **shards** that must be re-assembled within a set quorum to unlock the file's contents. 
+Phylactery doesn't use passwords and never stores the key used to encrypt/decrypt its files. Instead of remembering a password, users protect their information through a series of **shards** that must be securely reassembled in a quorum to generate/re-generate the keys used to encrypt a file. 
+
 
 ## Cryptography
 
